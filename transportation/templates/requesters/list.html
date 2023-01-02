@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1>Requesters</h1>
+  <ul>
+    {% for requester in requesters %}
+      <li>{{ requester.name }} - {{ requester.email_id }}</li>
+    {% endfor %}
+  </ul>
+{% endblock %}

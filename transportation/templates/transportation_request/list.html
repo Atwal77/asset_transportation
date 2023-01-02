@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block content %}
+    <h1>Request List</h1>
+    {% for rider in riders %}
+        <h2>{{ rider.name }}</h2>
+        <p>From: {{ rider.from_location }}</p>
+        <p>To: {{ rider.to_location }}</p>
+        <p>Number of assets: {{ rider.assets }}</p>
+        <p><a href="{% url 'rider-details' rider.pk %}">View details</a></p>
+    {% endfor %}
+{% endblock %}
